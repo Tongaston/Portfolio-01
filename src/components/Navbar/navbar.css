@@ -1,0 +1,123 @@
+ .navbar {
+    height: 5rem;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: var(navbar-background);
+    backdrop-filter: blur(10px);
+}
+
+.logoNavbar {
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+}
+
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+
+    &:hover {
+    color: var(--text-green);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--text-green);
+}
+}
+
+.desktopMenuBtn {
+    background-color: var(--border-color);
+    color: var(--button-color-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.desktopMenuIcon {
+    object-fit: cover;
+    height: 1.2rem;
+} 
+
+.active {
+    color: var(--text-green);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--text-green);
+}
+
+.burguerLogo {
+    display: none;
+    object-fit: cover;
+    width: 2.5rem;
+    color: var(--text-green);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: var(--mobile-menu-background);
+    border-radius: 1rem;
+}
+
+.mobileMenuListItem {
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* media querys */
+
+@media screen and (max-width: 720px) {
+    .burguerLogo {
+        display: flex;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+
+    .desktopMenuBtn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .desktopMenuBtn {
+        font-size: 1rem;
+    }
+
+    .desktopMenuIcon {
+        height: 1rem;
+    } 
+}
+

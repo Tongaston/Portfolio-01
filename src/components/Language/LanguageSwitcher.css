@@ -1,0 +1,12 @@
+.language-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.language-toggle:hover {
+  transform: scale(1.1);
+}
+

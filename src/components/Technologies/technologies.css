@@ -1,0 +1,77 @@
+#sectionTech {
+  min-height: calc(100vh - 5rem);
+  width: 100vw;
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.titleTech {
+  text-align: center;
+  font-size: 4rem;
+  margin: 1rem auto;
+}
+
+.paraTech {
+  font-size: 1.1rem;
+  text-wrap: balance;
+  text-align: center;
+  margin: 0.5rem auto 2rem auto;
+  max-width: 50rem;
+  padding: 0 2rem;
+  opacity: 0.8;
+}
+
+.stackContainer {
+  max-width: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+.techContainer {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+  background-color: var(--about-bars-color);
+  border-radius: 8px;
+}
+
+.techContainer > h2 {
+  margin-top: 1.5rem;
+}
+
+.listTech {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.itemTec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  margin-top: 0.5rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: 540px) {
+  .titleTech {
+    font-size: 3rem;
+  }
+}
