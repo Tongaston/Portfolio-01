@@ -66,6 +66,8 @@ i18n.use(initReactI18next).init({
           'A Progressive Web App that allows users to add products to a cart and checkout.',
           'A classic Snake game created with JavaScript.':
           'A classic Snake game created with JavaScript.',
+          "ver_demo": "View Demo",
+          "Código": "Code",
 
         // Technologies Component
         Technologies1: 'Technologies',
@@ -152,6 +154,8 @@ i18n.use(initReactI18next).init({
           'Una Progressive Web App que permite a los usuarios agregar productos a un carrito y realizar el pago.',
           'A classic Snake game created with JavaScript.':
           'Un juego de la serpiente clásico creado con JavaScript.',
+          "ver_demo": "Ver Demo",
+          "Código": "Código",
 
         // Technologies Component
         Technologies1: 'Tecnologías',

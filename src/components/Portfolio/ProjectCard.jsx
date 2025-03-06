@@ -1,7 +1,9 @@
 import React from 'react';
 import './ProjectCard.css';
+import { useTranslation } from 'react-i18next';
 
 const ProjectCard = ({ title, description, imageName, demoLink, codeLink, technologies }) => {
+  const { t } = useTranslation();
   return (
     <div className="project-card">
       <div className="project-image">
@@ -21,10 +23,10 @@ const ProjectCard = ({ title, description, imageName, demoLink, codeLink, techno
 
         <div className="project-links">
           <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-            Ver Demo
+            {t("ver_demo")}
           </a>
           <a href={codeLink} target="_blank" rel="noopener noreferrer" className="project-link code-link">
-            Código
+            {t("Código")}
           </a>
         </div>
       </div>
