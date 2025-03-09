@@ -50,7 +50,7 @@ const Portfolio = () => {
       demoLink: 'https://mamma-shop-list.netlify.app/',
       codeLink:
         'https://github.com/Tongaston/Scrimba-JavaScript-Practice/tree/main/Add%20to%20Cart',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Netlify'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     },
     {
       title: 'Snake Game',
