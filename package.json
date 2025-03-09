@@ -13,9 +13,11 @@
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.6",
     "dotenv": "^16.4.7",
+    "i18next": "^24.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
+    "react-reveal": "^1.2.2",
     "react-scroll": "^1.9.3"
   },
   "devDependencies": {
