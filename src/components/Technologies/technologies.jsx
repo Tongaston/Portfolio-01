@@ -2,6 +2,7 @@ import React from 'react'
 import './technologies.css'
 
 import { useTranslation } from 'react-i18next'
+import Zoom from 'react-reveal/Zoom'
 
 function Technologies() {
   const { t } = useTranslation()
@@ -16,6 +17,7 @@ function Technologies() {
         ,
       </p>
       <div className="stackContainer">
+        <Zoom>
         <div className="techContainer">
           <h2>Frontend</h2>
           <ul className="listTech">
@@ -104,7 +106,9 @@ function Technologies() {
             </li>
           </ul>
         </div>
+        </Zoom>
 
+        <Zoom>
         <div className="techContainer">
           <h2>{t('Tools')}</h2>
           <ul className="listTech">
@@ -170,7 +174,9 @@ function Technologies() {
             </li>
           </ul>
         </div>
+        </Zoom>
 
+        <Zoom>
         <div className="techContainer">
           <h2>{t('Learning')}</h2>
           <ul className="listTech">
@@ -213,7 +219,8 @@ function Technologies() {
             </li>
           </ul>
         </div>
-      </div>
+        </Zoom>
+      </div> 
     </section>
   )
 }

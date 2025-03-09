@@ -9,6 +9,7 @@ import imgAseoClean from '../../assets/aseoclean-page.png'
 import imgAddToCart from '../../assets/PWA-Add to Cart.png'
 
 import { useTranslation } from 'react-i18next'
+import Zoom from 'react-reveal/Zoom'
 
 const Portfolio = () => {
   const { t } = useTranslation()
@@ -87,6 +88,7 @@ const Portfolio = () => {
       <div className="imgContainer">
         <div className="imgWrapper">
           {visibleProjects.map((project, index) => (
+            <Zoom>
             <ProjectCard
               key={index}
               title={project.title}
@@ -96,6 +98,7 @@ const Portfolio = () => {
               codeLink={project.codeLink}
               technologies={project.technologies}
             />
+            </Zoom>
           ))}
         </div>
       </div>

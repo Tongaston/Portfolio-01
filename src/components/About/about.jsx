@@ -6,6 +6,7 @@ import webDesign from '../../assets/web design.svg'
 import responsiveDesign from '../../assets/responsive app.svg'
 
 import { useTranslation } from 'react-i18next'
+import Zoom from 'react-reveal/Zoom'
 
 const About = () => {
   const { t } = useTranslation()
@@ -31,6 +32,7 @@ const About = () => {
         web development. */}
       </p>
       <ul className="aboutBars">
+        <Zoom>
         <li className="aboutBar">
           <img
             src={UIDesign}
@@ -46,7 +48,8 @@ const About = () => {
             </p>
           </div>
         </li>
-
+        </Zoom>
+        <Zoom>        
         <li className="aboutBar">
           <img
             src={webDesign}
@@ -62,7 +65,9 @@ const About = () => {
             </p>
           </div>
         </li>
+        </Zoom>
 
+        <Zoom>        
         <li className="aboutBar">
           <img
             src={responsiveDesign}
@@ -78,6 +83,7 @@ const About = () => {
             </p>
           </div>
         </li>
+        </Zoom>
       </ul>
     </section>
   )
