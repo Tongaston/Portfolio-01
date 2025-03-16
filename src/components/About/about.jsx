@@ -36,9 +36,10 @@ const About = () => {
 
         <motion.li
   className="aboutBar"      
-  initial={{ opacity: 0, scale: 0.3 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.5 }}
+  initial={{ opacity: 0, x: -500, scale: 0 }}
+  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+  // animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
 >
           <img
             src={UIDesign}
@@ -57,9 +58,10 @@ const About = () => {
 
         <motion.li
   className="aboutBar"      
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.5 }}
+  initial={{ opacity: 0, x: 500, scale: 0 }}
+  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+  // animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
 >
           <img
             src={webDesign}
@@ -78,8 +80,9 @@ const About = () => {
 
         <motion.li
   className="aboutBar"      
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
+  initial={{ opacity: 0, x: -500, scale: 0 }}
+  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+  // animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.5 }}
 >
           <img
