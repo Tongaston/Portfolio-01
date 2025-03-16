@@ -6,6 +6,8 @@ import webDesign from '../../assets/web design.svg'
 import responsiveDesign from '../../assets/responsive app.svg'
 
 import { useTranslation } from 'react-i18next'
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
+
 
 const About = () => {
   const { t } = useTranslation()
@@ -31,8 +33,13 @@ const About = () => {
         web development. */}
       </p>
       <ul className="aboutBars">
-        
-        <li className="aboutBar">
+
+        <motion.li
+  className="aboutBar"      
+  initial={{ opacity: 0, scale: 0.3 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+>
           <img
             src={UIDesign}
             className="aboutImg"
@@ -46,9 +53,14 @@ const About = () => {
               attractive way. */}
             </p>
           </div>
-        </li>
-                
-        <li className="aboutBar">
+        </motion.li>
+
+        <motion.li
+  className="aboutBar"      
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+>
           <img
             src={webDesign}
             className="aboutImg"
@@ -62,9 +74,14 @@ const About = () => {
               intuitive layout of information. */}
             </p>
           </div>
-        </li>
-  
-        <li className="aboutBar">
+        </motion.li>
+
+        <motion.li
+  className="aboutBar"      
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+>
           <img
             src={responsiveDesign}
             className="aboutImg"
@@ -78,7 +95,7 @@ const About = () => {
               device used. */}
             </p>
           </div>
-        </li>
+        </motion.li>
       </ul>
     </section>
   )
