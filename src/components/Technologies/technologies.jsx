@@ -2,6 +2,7 @@ import React from 'react'
 import './technologies.css'
 
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 
 function Technologies() {
   const { t } = useTranslation()
@@ -17,7 +18,13 @@ function Technologies() {
       </p>
       <div className="stackContainer">
         
-        <div className="techContainer">
+        <motion.div 
+        className="techContainer"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        >
           <h2>Frontend</h2>
           <ul className="listTech">
             <li className="itemTec">
@@ -104,9 +111,15 @@ function Technologies() {
               <span>TailwindCSS</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
         
-        <div className="techContainer">
+        <motion.div 
+        className="techContainer"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        >
           <h2>{t('Tools')}</h2>
           <ul className="listTech">
             <li className="itemTec">
@@ -170,9 +183,15 @@ function Technologies() {
               <span>npm</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="techContainer">
+        <motion.div 
+        className="techContainer"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        >
           <h2>{t('Learning')}</h2>
           <ul className="listTech">
             <li className="itemTec">
@@ -213,7 +232,7 @@ function Technologies() {
               <span>NodeJS</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div> 
     </section>
   )
