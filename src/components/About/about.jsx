@@ -40,7 +40,7 @@ const About = () => {
   whileInView={{ opacity: 1, x: 0, scale: 1 }}
   // animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true }} 
+  viewport={{ once: true, amount: 0.2 }} 
 >
           <img
             src={UIDesign}
