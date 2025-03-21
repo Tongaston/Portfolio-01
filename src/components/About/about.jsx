@@ -7,10 +7,12 @@ import responsiveDesign from '../../assets/responsive app.svg'
 
 import { useTranslation } from 'react-i18next'
 import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
+import { useInView } from "react-intersection-observer";
 
 
 const About = () => {
   const { t } = useTranslation()
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <section id="about">
@@ -35,10 +37,10 @@ const About = () => {
       <ul className="aboutBars">
 
         <motion.li
-  className="aboutBar"      
+  className="aboutBar"
+  ref={ref}
   initial={{ opacity: 0, x: -500, scale: 0 }}
-  whileInView={{ opacity: 1, x: 0, scale: 1 }}
-  // animate={{ opacity: 1, scale: 1 }}
+  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
@@ -58,10 +60,10 @@ const About = () => {
         </motion.li>
 
         <motion.li
-  className="aboutBar"      
+  className="aboutBar"
+  ref={ref}  
   initial={{ opacity: 0, x: 500, scale: 0 }}
-  whileInView={{ opacity: 1, x: 0, scale: 1 }}
-  // animate={{ opacity: 1, scale: 1 }}
+  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
@@ -81,10 +83,10 @@ const About = () => {
         </motion.li>
 
         <motion.li
-  className="aboutBar"      
+  className="aboutBar"
+  ref={ref}     
   initial={{ opacity: 0, x: -500, scale: 0 }}
-  whileInView={{ opacity: 1, x: 0, scale: 1 }}
-  // animate={{ opacity: 1, scale: 1 }}
+  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.5 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
