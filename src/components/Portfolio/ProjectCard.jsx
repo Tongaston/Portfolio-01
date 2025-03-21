@@ -2,10 +2,10 @@ import React from 'react';
 import './ProjectCard.css';
 import { useTranslation } from 'react-i18next';
 
-const ProjectCard = ({ title, description, imageName, demoLink, codeLink, technologies }) => {
+const ProjectCard = ({ title, description, imageName, demoLink, codeLink, technologies, onClick }) => {
   const { t } = useTranslation();
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={onClick}>
       <div className="project-image">
       <img src={imageName} alt={title} />
       </div>
@@ -22,10 +22,12 @@ const ProjectCard = ({ title, description, imageName, demoLink, codeLink, techno
         </div>
 
         <div className="project-links">
-          <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+          <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-link"
+          onClick={(e) => e.stopPropagation()}>  
             {t("ver_demo")}
           </a>
-          <a href={codeLink} target="_blank" rel="noopener noreferrer" className="project-link code-link">
+          <a href={codeLink} target="_blank" rel="noopener noreferrer" className="project-link code-link" 
+          onClick={(e) => e.stopPropagation()}>  
             {t("Código")}
           </a>
         </div>
