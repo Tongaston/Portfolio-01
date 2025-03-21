@@ -40,7 +40,7 @@ const About = () => {
   whileInView={{ opacity: 1, x: 0, scale: 1 }}
   // animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true, amount: 0.2 }} 
+  viewport={{ once: true, amount: 0.1 }} 
 >
           <img
             src={UIDesign}
@@ -63,7 +63,7 @@ const About = () => {
   whileInView={{ opacity: 1, x: 0, scale: 1 }}
   // animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true }} 
+  viewport={{ once: true, amount: 0.1 }} 
 >
           <img
             src={webDesign}
@@ -86,7 +86,7 @@ const About = () => {
   whileInView={{ opacity: 1, x: 0, scale: 1 }}
   // animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.5 }}
-  viewport={{ once: true }} 
+  viewport={{ once: true, amount: 0.1 }} 
 >
           <img
             src={responsiveDesign}
