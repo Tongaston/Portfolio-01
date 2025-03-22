@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
+    overflow: visible !important;
 }
 
 .aboutTitle {
@@ -27,14 +28,16 @@
 .aboutBars {
     padding: 1rem;
     width: 100vw;
-    min-height: 80px;
+    min-height: 200px;
     max-width: 80%;
     margin: 2rem auto;
     border-radius: 10px;
+    overflow: visible !important;
 }
 
 .aboutBar {
-    display: flex;
+    display: flex !important;
+    min-height: 100px;
     align-items: center;
     background-color: var(--about-bars-color);
     margin: 0.7rem;
