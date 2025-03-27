@@ -12,7 +12,10 @@ import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const { t } = useTranslation()
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2 });
+const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.2 });
+const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
+
 
   return (
     <section id="about">
@@ -38,9 +41,9 @@ const About = () => {
 
         <motion.li
   className="aboutBar"
-  ref={ref}
-  initial={{ opacity: 0, x: -500, scale: 0 }}
-  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
+  ref={ref1}
+  initial={{ opacity: 0, x: -200, scale: 0.5 }}
+  animate={inView1 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
@@ -61,9 +64,9 @@ const About = () => {
 
         <motion.li
   className="aboutBar"
-  ref={ref}  
-  initial={{ opacity: 0, x: 500, scale: 0 }}
-  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
+  ref={ref2}  
+  initial={{ opacity: 0, x: 300, scale: 0.5 }}
+  animate={inView2 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
@@ -84,9 +87,9 @@ const About = () => {
 
         <motion.li
   className="aboutBar"
-  ref={ref}     
-  initial={{ opacity: 0, x: -500, scale: 0 }}
-  animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
+  ref={ref3}     
+  initial={{ opacity: 0, x: -200, scale: 0.5 }}
+  animate={inView3 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.5 }}
   viewport={{ once: true, amount: 0.1 }} 
 >
