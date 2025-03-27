@@ -65,6 +65,11 @@
 /* media querys */
 
 @media screen and (max-width: 400px){
+    .aboutBars {
+        display: flex !important;
+        flex-direction: column;
+      }
+
     .aboutTitle {
         font-size: 3rem;
         margin-bottom: 0.8rem;
