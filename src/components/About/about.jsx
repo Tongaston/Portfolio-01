@@ -65,7 +65,7 @@ const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
         <motion.li
   className="aboutBar"
   ref={ref2}  
-  initial={{ opacity: 0, x: 300, scale: 0.5 }}
+  initial={{ opacity: 0, x: 200, scale: 0.5 }}
   animate={inView2 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
   viewport={{ once: true, amount: 0.1 }} 
