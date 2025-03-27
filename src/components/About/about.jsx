@@ -12,9 +12,9 @@ import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const { t } = useTranslation()
-  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2 });
-const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.2 });
-const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2, triggerOnce: true });
+const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.2, triggerOnce: true });
+const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2, triggerOnce: true });
 
 
   return (
@@ -45,7 +45,7 @@ const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
   initial={{ opacity: 0, x: -200, scale: 0.5 }}
   animate={inView1 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true, amount: 0.1 }} 
+  viewport={{ amount: 0.5 }} 
 >
           <img
             src={UIDesign}
@@ -68,7 +68,7 @@ const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
   initial={{ opacity: 0, x: 200, scale: 0.5 }}
   animate={inView2 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true, amount: 0.1 }} 
+  viewport={{ amount: 0.5 }} 
 >
           <img
             src={webDesign}
@@ -91,7 +91,7 @@ const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
   initial={{ opacity: 0, x: -200, scale: 0.5 }}
   animate={inView3 ? { opacity: 1, x: 0, scale: 1 } : {}}
   transition={{ duration: 0.5 }}
-  viewport={{ once: true, amount: 0.1 }} 
+  viewport={{ amount: 0.5 }} 
 >
           <img
             src={responsiveDesign}
